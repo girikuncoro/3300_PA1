@@ -31,6 +31,13 @@ body {
     stroke: steelblue;
 }
 
+h1 {
+    padding-top: 20px;
+}
+
+p {
+    font-size: 14px;
+}
 
 
 
@@ -40,6 +47,8 @@ body {
 <script src="http://d3js.org/d3.v3.js"></script>
 
 <div>
+    <h1>Enrollment in Public vs Private Schools in the US (1889-2021*)</h1>
+    <p>* Projected</p>
 <script>
 
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
@@ -99,7 +108,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Students");
+      .text("Students (in thousands)");
 
   svg_both.append("path")
       .datum(data)
@@ -116,6 +125,8 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
 </div>
 
 <div>
+    <h1>Enrollment in Private Schools in the US (1889-2021*)</h1>
+    <p>* Projected</p>
 <script>
 
 var svg_private = d3.select("body").append("svg")
@@ -147,7 +158,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Students");
+      .text("Students (in thousands)");
 
   svg_private.append("path")
       .datum(data)
@@ -159,6 +170,8 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
 </div>
 
 <div>
+    <h1>Enrollment in Private Schools in the US (1889-2021*)</h1>
+    <p>* Projected</p>
 <script>
 
 var svg_public = d3.select("body").append("svg")
@@ -190,7 +203,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Students");
+      .text("Students (in thousands)");
 
   svg_public.append("path")
       .datum(data)
