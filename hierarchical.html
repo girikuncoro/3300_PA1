@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <style>
 
-h1 {
-  font: sans-serif;
+h3 {
+  font: Helvetica;
 }
 
 text, remark {
@@ -44,9 +44,6 @@ var x = d3.scale.linear()
 
 var barHeight = 15;
 
-var color = d3.scale.ordinal()
-    .range(["steelblue", "#ccc"]);
-
 var duration = 0,
     delay = 0;
 
@@ -57,33 +54,38 @@ var xAxis = d3.svg.axis()
     .scale(x)
     .orient("top");
 
-var svg = d3.select("#d1").append("svg")
+var svg1 = d3.select("#d1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.append("g")
+svg1.append("g")
     .attr("class", "x axis");
 
-svg.append("g")
+svg1.append("g")
     .attr("class", "y axis")
   .append("line")
     .attr("y1", "100%");
+
+svg1.append("text")
+    .attr("x", width + 20)
+    .attr("y", -9)
+    .text("USD");
 
 d3.json("Dataset/average.json", function(error, d) {
   partition.nodes(d);
   var i = 0;
 
   // Per above, entering bars are immediately visible.
-  var enter = bar(d)
-      .attr("transform", stack(i))
+  var enter = bar1(d)
+      .attr("transform", stack(i));
 
   // Update the x-scale domain.
   x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
 
   // Update the x-axis.
-  svg.selectAll(".x.axis")
+  svg1.selectAll(".x.axis")
       .call(xAxis);
 
   // Transition entering bars to their new position.
@@ -94,64 +96,35 @@ d3.json("Dataset/average.json", function(error, d) {
   // Transition entering rects to the new x-scale.
   enterTransition.select("rect")
       .attr("width", function(d) { return x(d.value); })
-      .style("fill", "steelblue");
+      .style("fill", function(d) {
+        if (d.value > 20000){ return "#045a8d"; } 
+        else if (d.value > 15000){ return "#2b8cbe"; } 
+        else if (d.value > 10000){ return "#74a9cf"; } 
+        else if (d.value > 5000){ return "#bdc9e1"; } 
+        else { return "#f1eef6";}
+      });
 });
 
-var svg1 = d3.select("#d2").append("svg")
+var svg2 = d3.select("#d2").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg1.append("g")
+svg2.append("g")
     .attr("class", "x1 axis");
 
-svg1.append("g")
+svg2.append("g")
     .attr("class", "y1 axis")
   .append("line")
     .attr("y1", "100%");
 
+svg2.append("text")
+    .attr("x", width + 20)
+    .attr("y", -9)
+    .text("USD");
+
 d3.json("Dataset/highschool.json", function(error, d) {
-  partition.nodes(d);
-  var i = 0;
-
-  // Per above, entering bars are immediately visible.
-  var enter = bar1(d)
-      .attr("transform", stack(i))
-
-  // Update the x-scale domain.
-  x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
-
-  // Update the x-axis.
-  svg1.selectAll(".x1.axis")
-      .call(xAxis);
-
-  // Transition entering bars to their new position.
-  var enterTransition = enter.transition()
-      .duration(duration)
-      .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; });
-
-  // Transition entering rects to the new x-scale.
-  enterTransition.select("rect")
-      .attr("width", function(d) { return x(d.value); })
-      .style("fill", "steelblue");
-});
-
-var svg2 = d3.select("#d3").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-svg2.append("g")
-    .attr("class", "x2 axis");
-
-svg2.append("g")
-    .attr("class", "y2 axis")
-  .append("line")
-    .attr("y1", "100%");
-
-d3.json("Dataset/elementary.json", function(error, d) {
   partition.nodes(d);
   var i = 0;
 
@@ -163,7 +136,7 @@ d3.json("Dataset/elementary.json", function(error, d) {
   x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
 
   // Update the x-axis.
-  svg2.selectAll(".x2.axis")
+  svg2.selectAll(".x1.axis")
       .call(xAxis);
 
   // Transition entering bars to their new position.
@@ -174,36 +147,69 @@ d3.json("Dataset/elementary.json", function(error, d) {
   // Transition entering rects to the new x-scale.
   enterTransition.select("rect")
       .attr("width", function(d) { return x(d.value); })
-      .style("fill", "steelblue");
+      .style("fill", function(d) {
+        if (d.value > 20000){ return "#045a8d"; } 
+        else if (d.value > 15000){ return "#2b8cbe"; } 
+        else if (d.value > 10000){ return "#74a9cf"; } 
+        else if (d.value > 5000){ return "#bdc9e1"; } 
+        else { return "#f1eef6";}
+      });
+});
+
+var svg3 = d3.select("#d3").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg3.append("g")
+    .attr("class", "x2 axis");
+
+svg3.append("g")
+    .attr("class", "y2 axis")
+  .append("line")
+    .attr("y1", "100%");
+
+svg3.append("text")
+    .attr("x", width + 20)
+    .attr("y", -9)
+    .text("USD");
+
+d3.json("Dataset/elementary.json", function(error, d) {
+  partition.nodes(d);
+  var i = 0;
+
+  // Per above, entering bars are immediately visible.
+  var enter = bar3(d)
+      .attr("transform", stack(i))
+
+  // Update the x-scale domain.
+  x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
+
+  // Update the x-axis.
+  svg3.selectAll(".x2.axis")
+      .call(xAxis);
+
+  // Transition entering bars to their new position.
+  var enterTransition = enter.transition()
+      .duration(duration)
+      .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; });
+
+  // Transition entering rects to the new x-scale.
+  enterTransition.select("rect")
+      .attr("width", function(d) { return x(d.value); })
+      .style("fill", function(d) {
+        if (d.value > 20000){ return "#045a8d"; } 
+        else if (d.value > 15000){ return "#2b8cbe"; } 
+        else if (d.value > 10000){ return "#74a9cf"; } 
+        else if (d.value > 5000){ return "#bdc9e1"; } 
+        else { return "#f1eef6";}
+      });
 });
 
 // Creates a set of bars for the given data node, at the specified index.
-function bar(d) {
-  var bar = svg.insert("g", ".y.axis")
-      .attr("class", "enter")
-      .attr("transform", "translate(0,5)")
-    .selectAll("g")
-      .data(d.children)
-    .enter().append("g")
-      .style("cursor", function(d) { return !d.children ? null : "pointer"; })
-
-  bar.append("text")
-      .attr("x", -6)
-      .attr("y", barHeight / 2)
-      .attr("dy", ".35em")
-      .style("text-anchor", "end")
-      .text(function(d) { return d.name; });
-
-  bar.append("rect")
-      .attr("width", function(d) { return x(d.value); })
-      .attr("height", barHeight);
-
-  return bar;
-}
-
-// Creates a set of bars for the given data node, at the specified index.
 function bar1(d) {
-  var bar1 = svg1.insert("g", ".y1.axis")
+  var bar1 = svg1.insert("g", ".y.axis")
       .attr("class", "enter")
       .attr("transform", "translate(0,5)")
     .selectAll("g")
@@ -212,23 +218,29 @@ function bar1(d) {
       .style("cursor", function(d) { return !d.children ? null : "pointer"; })
 
   bar1.append("text")
-      .attr("transform", "translate(-5,8)")
-      .attr("x1", -6)
-      .attr("y1", barHeight / 2)
+      .attr("x", -6)
+      .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
       .text(function(d) { return d.name; });
-
+  
   bar1.append("rect")
       .attr("width", function(d) { return x(d.value); })
       .attr("height", barHeight);
 
+  bar1.append("text")
+      .attr("x", function(d) { return x(d.value)/24200 - 5; })
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .style("fill", function(d) { if (d.value > 5000) { return "white"; }})
+      .text(function(d) { return (d.value / 1000).toFixed(1) + 'k'; });
   return bar1;
 }
 
 // Creates a set of bars for the given data node, at the specified index.
 function bar2(d) {
-  var bar2 = svg2.insert("g", ".y2.axis")
+  var bar2 = svg2.insert("g", ".y1.axis")
       .attr("class", "enter")
       .attr("transform", "translate(0,5)")
     .selectAll("g")
@@ -238,8 +250,8 @@ function bar2(d) {
 
   bar2.append("text")
       .attr("transform", "translate(-5,8)")
-      .attr("x2", -6)
-      .attr("y2", barHeight / 2)
+      .attr("x1", -6)
+      .attr("y1", barHeight / 2)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
       .text(function(d) { return d.name; });
@@ -248,7 +260,47 @@ function bar2(d) {
       .attr("width", function(d) { return x(d.value); })
       .attr("height", barHeight);
 
+  bar2.append("text")
+      .attr("x", function(d) { return x(d.value)/1.7;})
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .style("fill", function(d) { if (d.value > 5000) { return "white"; }})
+      .text(function(d) { if(d.value > 0) { return (d.value / 1000).toFixed(1) + 'k'; }});
+
   return bar2;
+}
+
+// Creates a set of bars for the given data node, at the specified index.
+function bar3(d) {
+  var bar3 = svg3.insert("g", ".y2.axis")
+      .attr("class", "enter")
+      .attr("transform", "translate(0,5)")
+    .selectAll("g")
+      .data(d.children)
+    .enter().append("g")
+      .style("cursor", function(d) { return !d.children ? null : "pointer"; })
+
+  bar3.append("text")
+      .attr("transform", "translate(-5,8)")
+      .attr("x2", -6)
+      .attr("y2", barHeight / 2)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d.name; });
+
+  bar3.append("rect")
+      .attr("width", function(d) { return x(d.value); })
+      .attr("height", barHeight);
+
+  bar3.append("text")
+      .attr("x", function(d) { return x(d.value) * 2.2 - 5;})
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .style("fill", function(d) { if (d.value > 5000) { return "white"; }})
+      .text(function(d) { if(d.value > 0) { return (d.value / 1000).toFixed(1) + 'k'; }});
+  return bar3;
 }
 
 // A stateful closure for stacking bars horizontally.
