@@ -1,267 +1,470 @@
 [
   {
-    "FIELD1":"Year",
-    "FIELD2":"Public",
-    "FIELD3":"Private"
+    "Year":1889,
+    "Public":12723,
+    "Private":1611,
+    "PublicElem":12520,
+    "PublicSec":203,
+    "PrivateElem":1516,
+    "PrivateSec":95
   },
   {
-    "FIELD1":"1889-90",
-    "FIELD2":"12723",
-    "FIELD3":"1611"
+    "Year":1899,
+    "Public":15503,
+    "Private":1352,
+    "PublicElem":14984,
+    "PublicSec":519,
+    "PrivateElem":1241,
+    "PrivateSec":111
   },
   {
-    "FIELD1":"1899-1900",
-    "FIELD2":"15503",
-    "FIELD3":"1352"
+    "Year":1909,
+    "Public":17814,
+    "Private":1558,
+    "PublicElem":16899,
+    "PublicSec":915,
+    "PrivateElem":1441,
+    "PrivateSec":117
   },
   {
-    "FIELD1":"1909-10",
-    "FIELD2":"17814",
-    "FIELD3":"1558"
+    "Year":1919,
+    "Public":21578,
+    "Private":1699,
+    "PublicElem":19378,
+    "PublicSec":2200,
+    "PrivateElem":1486,
+    "PrivateSec":214
   },
   {
-    "FIELD1":"1919-20",
-    "FIELD2":"21578",
-    "FIELD3":"1699"
+    "Year":1929,
+    "Public":25678,
+    "Private":2651,
+    "PublicElem":21279,
+    "PublicSec":4399,
+    "PrivateElem":2310,
+    "PrivateSec":341
   },
   {
-    "FIELD1":"1929-30",
-    "FIELD2":"25678",
-    "FIELD3":"2651"
+    "Year":1939,
+    "Public":25434,
+    "Private":2611,
+    "PublicElem":18832,
+    "PublicSec":6601,
+    "PrivateElem":2153,
+    "PrivateSec":458
   },
   {
-    "FIELD1":"1939-40",
-    "FIELD2":"25434",
-    "FIELD3":"2611"
+    "Year":1949,
+    "Public":25111,
+    "Private":3380,
+    "PublicElem":19387,
+    "PublicSec":5725,
+    "PrivateElem":2708,
+    "PrivateSec":672
   },
   {
-    "FIELD1":"1949-50",
-    "FIELD2":"25111",
-    "FIELD3":"3380"
+    "Year":1959,
+    "Public":35182,
+    "Private":5675,
+    "PublicElem":26911,
+    "PublicSec":8271,
+    "PrivateElem":4640,
+    "PrivateSec":1035
   },
   {
-    "FIELD1":"1959",
-    "FIELD2":"35182",
-    "FIELD3":"5675"
+    "Year":1969,
+    "Public":45550,
+    "Private":5500,
+    "PublicElem":32513,
+    "PublicSec":13037,
+    "PrivateElem":4200,
+    "PrivateSec":1300
   },
   {
-    "FIELD1":"1969",
-    "FIELD2":"45550",
-    "FIELD3":"5500"
+    "Year":1979,
+    "Public":41651,
+    "Private":5000,
+    "PublicElem":28034,
+    "PublicSec":13616,
+    "PrivateElem":3700,
+    "PrivateSec":1300
   },
   {
-    "FIELD1":"1979",
-    "FIELD2":"41651",
-    "FIELD3":"5000"
+    "Year":1980,
+    "Public":40877,
+    "Private":5331,
+    "PublicElem":27647,
+    "PublicSec":13231,
+    "PrivateElem":3992,
+    "PrivateSec":1339
   },
   {
-    "FIELD1":"1980",
-    "FIELD2":"40877",
-    "FIELD3":"5331"
+    "Year":1981,
+    "Public":40044,
+    "Private":5500,
+    "PublicElem":27280,
+    "PublicSec":12764,
+    "PrivateElem":4100,
+    "PrivateSec":1400
   },
   {
-    "FIELD1":"1981",
-    "FIELD2":"40044",
-    "FIELD3":"5500"
+    "Year":1982,
+    "Public":39566,
+    "Private":5600,
+    "PublicElem":27161,
+    "PublicSec":12405,
+    "PrivateElem":4200,
+    "PrivateSec":1400
   },
   {
-    "FIELD1":"1982",
-    "FIELD2":"39566",
-    "FIELD3":"5600"
+    "Year":1983,
+    "Public":39252,
+    "Private":5715,
+    "PublicElem":26981,
+    "PublicSec":12271,
+    "PrivateElem":4315,
+    "PrivateSec":1400
   },
   {
-    "FIELD1":"1983",
-    "FIELD2":"39252",
-    "FIELD3":"5715"
+    "Year":1984,
+    "Public":39208,
+    "Private":5700,
+    "PublicElem":26905,
+    "PublicSec":12304,
+    "PrivateElem":4300,
+    "PrivateSec":1400
   },
   {
-    "FIELD1":"1984",
-    "FIELD2":"39208",
-    "FIELD3":"5700"
+    "Year":1985,
+    "Public":39422,
+    "Private":5557,
+    "PublicElem":27034,
+    "PublicSec":12388,
+    "PrivateElem":4195,
+    "PrivateSec":1362
   },
   {
-    "FIELD1":"1985",
-    "FIELD2":"39422",
-    "FIELD3":"5557"
+    "Year":1986,
+    "Public":39753,
+    "Private":5452,
+    "PublicElem":27420,
+    "PublicSec":12333,
+    "PrivateElem":4116,
+    "PrivateSec":1336
   },
   {
-    "FIELD1":"1986",
-    "FIELD2":"39753",
-    "FIELD3":"5452"
+    "Year":1987,
+    "Public":40008,
+    "Private":5479,
+    "PublicElem":27933,
+    "PublicSec":12076,
+    "PrivateElem":4232,
+    "PrivateSec":1247
   },
   {
-    "FIELD1":"1987",
-    "FIELD2":"40008",
-    "FIELD3":"5479"
+    "Year":1988,
+    "Public":40189,
+    "Private":5242,
+    "PublicElem":28501,
+    "PublicSec":11687,
+    "PrivateElem":4036,
+    "PrivateSec":1206
   },
   {
-    "FIELD1":"1988",
-    "FIELD2":"40189",
-    "FIELD3":"5242"
+    "Year":1989,
+    "Public":40543,
+    "Private":5599,
+    "PublicElem":29150,
+    "PublicSec":11393,
+    "PrivateElem":4468,
+    "PrivateSec":1131
   },
   {
-    "FIELD1":"1989",
-    "FIELD2":"40543",
-    "FIELD3":"5599"
+    "Year":1990,
+    "Public":41217,
+    "Private":5648,
+    "PublicElem":29876,
+    "PublicSec":11341,
+    "PrivateElem":4512,
+    "PrivateSec":1136
   },
   {
-    "FIELD1":"1990",
-    "FIELD2":"41217",
-    "FIELD3":"5648"
+    "Year":1991,
+    "Public":42047,
+    "Private":5681,
+    "PublicElem":30503,
+    "PublicSec":11544,
+    "PrivateElem":4550,
+    "PrivateSec":1131
   },
   {
-    "FIELD1":"1991",
-    "FIELD2":"42047",
-    "FIELD3":"5681"
+    "Year":1992,
+    "Public":42823,
+    "Private":5870,
+    "PublicElem":31086,
+    "PublicSec":11737,
+    "PrivateElem":4746,
+    "PrivateSec":1125
   },
   {
-    "FIELD1":"1992",
-    "FIELD2":"42823",
-    "FIELD3":"5870"
+    "Year":1993,
+    "Public":43465,
+    "Private":6067,
+    "PublicElem":31502,
+    "PublicSec":11963,
+    "PrivateElem":4950,
+    "PrivateSec":1118
   },
   {
-    "FIELD1":"1993",
-    "FIELD2":"43465",
-    "FIELD3":"6067"
+    "Year":1994,
+    "Public":44111,
+    "Private":5994,
+    "PublicElem":31896,
+    "PublicSec":12215,
+    "PrivateElem":4856,
+    "PrivateSec":1138
   },
   {
-    "FIELD1":"1994",
-    "FIELD2":"44111",
-    "FIELD3":"5994"
+    "Year":1995,
+    "Public":44840,
+    "Private":5918,
+    "PublicElem":32338,
+    "PublicSec":12502,
+    "PrivateElem":4756,
+    "PrivateSec":1163
   },
   {
-    "FIELD1":"1995",
-    "FIELD2":"44840",
-    "FIELD3":"5918"
+    "Year":1996,
+    "Public":45611,
+    "Private":5933,
+    "PublicElem":32762,
+    "PublicSec":12849,
+    "PrivateElem":4755,
+    "PrivateSec":1178
   },
   {
-    "FIELD1":"1996",
-    "FIELD2":"45611",
-    "FIELD3":"5933"
+    "Year":1997,
+    "Public":46127,
+    "Private":5944,
+    "PublicElem":33071,
+    "PublicSec":13056,
+    "PrivateElem":4759,
+    "PrivateSec":1185
   },
   {
-    "FIELD1":"1997",
-    "FIELD2":"46127",
-    "FIELD3":"5944"
+    "Year":1998,
+    "Public":46539,
+    "Private":5988,
+    "PublicElem":33344,
+    "PublicSec":13195,
+    "PrivateElem":4776,
+    "PrivateSec":1212
   },
   {
-    "FIELD1":"1998",
-    "FIELD2":"46539",
-    "FIELD3":"5988"
+    "Year":1999,
+    "Public":46857,
+    "Private":6018,
+    "PublicElem":33486,
+    "PublicSec":13371,
+    "PrivateElem":4789,
+    "PrivateSec":1229
   },
   {
-    "FIELD1":"1999",
-    "FIELD2":"46857",
-    "FIELD3":"6018"
+    "Year":2000,
+    "Public":47204,
+    "Private":6169,
+    "PublicElem":33686,
+    "PublicSec":13517,
+    "PrivateElem":4906,
+    "PrivateSec":1264
   },
   {
-    "FIELD1":"2000",
-    "FIELD2":"47204",
-    "FIELD3":"6169"
+    "Year":2001,
+    "Public":47672,
+    "Private":6320,
+    "PublicElem":33936,
+    "PublicSec":13736,
+    "PrivateElem":5023,
+    "PrivateSec":1296
   },
   {
-    "FIELD1":"2001",
-    "FIELD2":"47672",
-    "FIELD3":"6320"
+    "Year":2002,
+    "Public":48183,
+    "Private":6220,
+    "PublicElem":34114,
+    "PublicSec":14069,
+    "PrivateElem":4915,
+    "PrivateSec":1306
   },
   {
-    "FIELD1":"2002",
-    "FIELD2":"48183",
-    "FIELD3":"6220"
+    "Year":2003,
+    "Public":48540,
+    "Private":6099,
+    "PublicElem":34201,
+    "PublicSec":14339,
+    "PrivateElem":4788,
+    "PrivateSec":1311
   },
   {
-    "FIELD1":"2003",
-    "FIELD2":"48540",
-    "FIELD3":"6099"
+    "Year":2004,
+    "Public":48795,
+    "Private":6087,
+    "PublicElem":34178,
+    "PublicSec":14618,
+    "PrivateElem":4756,
+    "PrivateSec":1331
   },
   {
-    "FIELD1":"2004",
-    "FIELD2":"48795",
-    "FIELD3":"6087"
+    "Year":2005,
+    "Public":49113,
+    "Private":6073,
+    "PublicElem":34204,
+    "PublicSec":14909,
+    "PrivateElem":4724,
+    "PrivateSec":1349
   },
   {
-    "FIELD1":"2005",
-    "FIELD2":"49113",
-    "FIELD3":"6073"
+    "Year":2006,
+    "Public":49316,
+    "Private":5991,
+    "PublicElem":34235,
+    "PublicSec":15081,
+    "PrivateElem":4631,
+    "PrivateSec":1360
   },
   {
-    "FIELD1":"2006",
-    "FIELD2":"49316",
-    "FIELD3":"5991"
+    "Year":2007,
+    "Public":49293,
+    "Private":5910,
+    "PublicElem":34205,
+    "PublicSec":15087,
+    "PrivateElem":4546,
+    "PrivateSec":1364
   },
   {
-    "FIELD1":"2007",
-    "FIELD2":"49293",
-    "FIELD3":"5910"
+    "Year":2008,
+    "Public":49266,
+    "Private":5707,
+    "PublicElem":34286,
+    "PublicSec":14980,
+    "PrivateElem":4365,
+    "PrivateSec":1342
   },
   {
-    "FIELD1":"2008",
-    "FIELD2":"49266",
-    "FIELD3":"5707"
+    "Year":2009,
+    "Public":49361,
+    "Private":5488,
+    "PublicElem":34409,
+    "PublicSec":14952,
+    "PrivateElem":4179,
+    "PrivateSec":1309
   },
   {
-    "FIELD1":"2009",
-    "FIELD2":"49361",
-    "FIELD3":"5488"
+    "Year":2010,
+    "Public":49484,
+    "Private":5391,
+    "PublicElem":34625,
+    "PublicSec":14860,
+    "PrivateElem":4091,
+    "PrivateSec":1300
   },
   {
-    "FIELD1":"2010",
-    "FIELD2":"49484",
-    "FIELD3":"5391"
+    "Year":2011,
+    "Public":49636,
+    "Private":5320,
+    "PublicElem":34849,
+    "PublicSec":14787,
+    "PrivateElem":4060,
+    "PrivateSec":1260
   },
   {
-    "FIELD1":"2011",
-    "FIELD2":"49636",
-    "FIELD3":"5320"
+    "Year":2012,
+    "Public":49828,
+    "Private":5263,
+    "PublicElem":35076,
+    "PublicSec":14752,
+    "PrivateElem":4039,
+    "PrivateSec":1224
   },
   {
-    "FIELD1":"2012",
-    "FIELD2":"49828",
-    "FIELD3":"5263"
+    "Year":2013,
+    "Public":50067,
+    "Private":5221,
+    "PublicElem":35301,
+    "PublicSec":14766,
+    "PrivateElem":4033,
+    "PrivateSec":1188
   },
   {
-    "FIELD1":"2013",
-    "FIELD2":"50067",
-    "FIELD3":"5221"
+    "Year":2014,
+    "Public":50407,
+    "Private":5192,
+    "PublicElem":35502,
+    "PublicSec":14905,
+    "PrivateElem":4037,
+    "PrivateSec":1155
   },
   {
-    "FIELD1":"2014",
-    "FIELD2":"50407",
-    "FIELD3":"5192"
+    "Year":2015,
+    "Public":50773,
+    "Private":5183,
+    "PublicElem":35735,
+    "PublicSec":15038,
+    "PrivateElem":4053,
+    "PrivateSec":1130
   },
   {
-    "FIELD1":"2015",
-    "FIELD2":"50773",
-    "FIELD3":"5183"
+    "Year":2016,
+    "Public":51146,
+    "Private":5185,
+    "PublicElem":36029,
+    "PublicSec":15116,
+    "PrivateElem":4085,
+    "PrivateSec":1100
   },
   {
-    "FIELD1":"2016",
-    "FIELD2":"51146",
-    "FIELD3":"5185"
+    "Year":2017,
+    "Public":51524,
+    "Private":5198,
+    "PublicElem":36329,
+    "PublicSec":15195,
+    "PrivateElem":4122,
+    "PrivateSec":1076
   },
   {
-    "FIELD1":"2017",
-    "FIELD2":"51524",
-    "FIELD3":"5198"
+    "Year":2018,
+    "Public":51880,
+    "Private":5218,
+    "PublicElem":36639,
+    "PublicSec":15241,
+    "PrivateElem":4158,
+    "PrivateSec":1061
   },
   {
-    "FIELD1":"2018",
-    "FIELD2":"51880",
-    "FIELD3":"5218"
+    "Year":2019,
+    "Public":52260,
+    "Private":5247,
+    "PublicElem":36956,
+    "PublicSec":15304,
+    "PrivateElem":4193,
+    "PrivateSec":1054
   },
   {
-    "FIELD1":"2019",
-    "FIELD2":"52260",
-    "FIELD3":"5247"
+    "Year":2020,
+    "Public":52688,
+    "Private":5287,
+    "PublicElem":37278,
+    "PublicSec":15410,
+    "PrivateElem":4228,
+    "PrivateSec":1059
   },
   {
-    "FIELD1":"2020",
-    "FIELD2":"52688",
-    "FIELD3":"5287"
-  },
-  {
-    "FIELD1":"2021",
-    "FIELD2":"53113",
-    "FIELD3":"5331"
+    "Year":2021,
+    "Public":53113,
+    "Private":5331,
+    "PublicElem":37598,
+    "PublicSec":15515,
+    "PrivateElem":4263,
+    "PrivateSec":1068
   }
 ]
