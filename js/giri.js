@@ -160,7 +160,10 @@ function bubble_school(){
   });
 
   var legendCircles = [
-    { "x_axis": 30, "y_axis": 30, "radius": 8, "color" : "#1f77b4", "texts": "Number of private schools" }];
+    { "x_axis": 30, "y_axis": 30, "radius": 8, "color" : "#1f77b4", "texts": "3,640 private schools in CA" },
+    { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#1f77b4", "texts": "2,270 private schools in PA" },
+    { "x_axis": 30, "y_axis": 70, "radius": 6, "color" : "#1f77b4", "texts": "2,020 private schools in NY" }
+    ];
 
   var legend = svg.selectAll("circle")
                   .data(legendCircles)
