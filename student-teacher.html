@@ -36,10 +36,13 @@
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="d3.legend.js"></script>
+
+<h1>Student-Teacher Ratio of Private and Public Schools (1955-2018*)</h1>
+<p>* Projected</p>
 <script>
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 1500 - margin.left - margin.right,
+    width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
@@ -76,7 +79,14 @@ data.forEach(function(d) {
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+      .call(xAxis)
+      .selectAll("text")  
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)" 
+                });
 
   svg.append("g")
       .attr("class", "y axis")
