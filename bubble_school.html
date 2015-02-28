@@ -38,11 +38,13 @@ d3.json("Dataset/schoolnumber.json", function(error, root) {
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.packageName); });
+      //.style("fill", function(d) { return color(d.packageName); });
+      .style("fill", "#1f77b4");
 
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
+      .style("fill", "white")
       .text(function(d) { return d.className.substring(0, d.r); });
 });
 

@@ -151,18 +151,25 @@ function bubble_school(){
 
     node.append("circle")
         .attr("r", function(d) { return d.r; })
-        .style("fill", function(d) { return color(d.packageName); });
+        .style("fill", function(d) { 
+          if(d.value > 3000){return "#238b45"}
+          else if(d.value > 2000){return "#74c476"}
+          else if(d.value > 1000){return "#bae4b3"}
+          else {return "#edf8e9"}; 
+        });
 
     node.append("text")
         .attr("dy", ".3em")
         .style("text-anchor", "middle")
+        .style("fill", function(d){ if (d.value > 3000) { return "white"; } else { return "black";}})
         .text(function(d) { return d.className.substring(0, d.r); });
   });
 
   var legendCircles = [
-    { "x_axis": 30, "y_axis": 30, "radius": 8, "color" : "#1f77b4", "texts": "3,640 private schools in CA" },
-    { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#1f77b4", "texts": "2,270 private schools in PA" },
-    { "x_axis": 30, "y_axis": 70, "radius": 6, "color" : "#1f77b4", "texts": "2,020 private schools in NY" }
+    { "x_axis": 30, "y_axis": 30, "radius": 7, "color" : "#238b45", "texts": "> 3,000 schools" },
+    { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#74c476", "texts": "2,001 - 3,000 schools" },
+    { "x_axis": 30, "y_axis": 70, "radius": 7, "color" : "#bae4b3", "texts": "1,001 - 2,000 schools" },
+    { "x_axis": 30, "y_axis": 90, "radius": 7, "color" : "#edf8e9", "texts": "< 1,000 schools" }
     ];
 
   var legend = svg.selectAll("circle")
