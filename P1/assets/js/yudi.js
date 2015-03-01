@@ -14,9 +14,9 @@ function us_map(){
 					 
 	//Define quantize scale to sort data values into buckets of color
 	var color = d3.scale.quantize()
-						.range(["rgb(237,248,233)","rgb(186,228,179)","rgb(116,196,118)","rgb(49,163,84)","rgb(0,109,44)"]);
+		.range(["rgb(237,248,233)","rgb(186,228,179)","rgb(116,196,118)","rgb(49,163,84)","rgb(0,109,44)"]);
 
-						//Colors taken from colorbrewer.js, included in the D3 download
+		//Colors taken from colorbrewer.js, included in the D3 download
 
 	//Create SVG element
 	var svg = d3.select("#map")
@@ -80,8 +80,8 @@ function us_map(){
 			   		var value = d.properties.value;
 
 			   		if (value > 20000){ return "#2F544D"; } 
-			        else if (value  > 15000){ return "#4FB791"; } 
-			        else if (value  > 10000){ return "#53937C"; } 
+			        else if (value  > 15000){ return "#53937C"; } 
+			        else if (value  > 10000){ return "#4FB791"; } 
 			        else if (value  > 5000){ return "#74CFAE"; } 
 			        else {return "#A4FEDA";}
 			   });

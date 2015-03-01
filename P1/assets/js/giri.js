@@ -4,7 +4,7 @@ function donut_race(){
 
   // color for races
   var color = d3.scale.ordinal()
-      .range(["#fef0d9", "#fdd49e", "#fdbb84", "#fc8d59", "#e34a33","#b30000" ]);
+      .range(["#8EFEF6", "#A4FEDA", "#74CFAE", "#4FB791", "#53937C", "#2F544D" ]);
 
   // color for gender
   var color1 = d3.scale.ordinal()
@@ -30,7 +30,7 @@ function donut_race(){
   var legend = d3.select("#donut1").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
-      .attr("height", radius * 2)
+      .attr("height", radius * 2.5)
     .selectAll("g")
       .data(color.domain().slice().reverse())
     .enter().append("g")
@@ -51,8 +51,8 @@ function donut_race(){
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
-      .attr("width", radius * 2)
-      .attr("height", radius * 2)
+      .attr("width", radius * 3)
+      .attr("height", radius * 2.5)
     .append("g")
       .attr("transform", "translate(" + radius + "," + radius + ")");
 
@@ -82,7 +82,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
   var legend = d3.select("#donut2").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
-      .attr("height", radius * 2)
+      .attr("height", radius * 2.5)
     .selectAll("g")
       .data(color1.domain().slice().reverse())
     .enter().append("g")
@@ -103,8 +103,8 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
-      .attr("width", radius * 2)
-      .attr("height", radius * 2)
+      .attr("width", radius * 3)
+      .attr("height", radius * 2.5)
     .append("g")
       .attr("transform", "translate(" + radius + "," + radius + ")");
 
