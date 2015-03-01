@@ -1,5 +1,5 @@
 function line_graph(){
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 20, right: 20, bottom: 200, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -90,7 +90,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
 }
 
 function ratio_graph() {
-    var margin = {top: 20, right: 20, bottom: 60, left: 40},
+    var margin = {top: 20, right: 20, bottom: 150, left: 40},
     width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 

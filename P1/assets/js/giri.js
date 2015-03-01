@@ -4,11 +4,11 @@ function donut_race(){
 
   // color for races
   var color = d3.scale.ordinal()
-      .range(["#8EFEF6", "#A4FEDA", "#74CFAE", "#4FB791", "#53937C", "#2F544D" ]);
+      .range(["#B9FFDB", "#A4FEDA", "#74CFAE", "#4FB791", "#53937C", "#2F544D" ]);
 
   // color for gender
   var color1 = d3.scale.ordinal()
-      .range(["#fdbb84", "#b30000" ]);
+      .range(["#4FB791", "#2F544D" ]);
 
   var arc = d3.svg.arc()
       .outerRadius(radius)
@@ -154,8 +154,8 @@ function bubble_school(){
         .style("fill", function(d) { 
           if(d.value > 3000){return "#377F65"}
           else if(d.value > 2000){return "#429980"}
-          else if(d.value > 1000){return "#63E59D"}
-          else {return "#B4FFD6"}; 
+          else if(d.value > 1000){return "#4DE8C6"}
+          else {return "#9BFFEE"}; 
         });
 
     node.append("text")
@@ -168,8 +168,8 @@ function bubble_school(){
   var legendCircles = [
     { "x_axis": 30, "y_axis": 30, "radius": 7, "color" : "#377F65", "texts": "> 3,000 schools" },
     { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#429980", "texts": "2,001 - 3,000 schools" },
-    { "x_axis": 30, "y_axis": 70, "radius": 7, "color" : "#63E59D", "texts": "1,001 - 2,000 schools" },
-    { "x_axis": 30, "y_axis": 90, "radius": 7, "color" : "#B4FFD6", "texts": "< 1,000 schools" }
+    { "x_axis": 30, "y_axis": 70, "radius": 7, "color" : "#4DE8C6", "texts": "1,001 - 2,000 schools" },
+    { "x_axis": 30, "y_axis": 90, "radius": 7, "color" : "#9BFFEE", "texts": "< 1,000 schools" }
     ];
 
   var legend = svg.selectAll("circle")
@@ -208,9 +208,9 @@ function bubble_school(){
 }
 
 function hie_tuition(){
-  var margin = {top: 30, right: 120, bottom: 0, left: 120},
+  var margin = {top: 100, right: 120, bottom: 80, left: 120},
       width = 960 - margin.left - margin.right,
-      height = 960 - margin.top - margin.bottom;
+      height = 1100 - margin.top - margin.bottom;
 
   var x = d3.scale.linear()
       .range([0, width]);

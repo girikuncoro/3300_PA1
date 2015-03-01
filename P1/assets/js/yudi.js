@@ -1,7 +1,7 @@
 function us_map(){
 	//Width and height
 	var w = 1000;
-	var h = 500;
+	var h = 600;
 
 	//Define map projection
 	var projection = d3.geo.albersUsa()
