@@ -30,7 +30,7 @@ var line_private_sec = d3.svg.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.PrivateSec); });
 
-var svg_private_grades = d3.select("#ratio").append("svg")
+var svg_private_grades = d3.select("#lines").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -90,7 +90,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
 }
 
 function ratio_graph() {
-    var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    var margin = {top: 20, right: 20, bottom: 60, left: 40},
     width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 

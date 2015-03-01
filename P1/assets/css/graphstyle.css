@@ -1,0 +1,73 @@
+body {
+  font: 10px sans-serif;
+}
+
+svg {
+  padding: 10px 0 0 10px;
+}
+
+.arc {
+  stroke: #fff;
+}
+
+text, remark {
+  font: 10px Helvetica;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2.5px;
+}  
+.private {
+    stroke: red;
+}
+
+.public {
+    stroke: steelblue;
+}
+
+.sec {
+    stroke: #B25329;
+}
+
+.elem {
+    stroke: #55B2A6;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;
+  }
+
+.private_bar {
+  fill: #e377c2;
+}
+
+.public_bar {
+  fill: #1f77b4;
+}
