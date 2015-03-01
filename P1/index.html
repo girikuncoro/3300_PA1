@@ -19,8 +19,9 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/chart.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="js/giri.js"></script>
-    <script src="js/d3.legend.js"></script>
+    <script src="assets/js/giri.js"></script>
+    <script src="assets/js/jenny.js"></script>
+    <script src="assets/js/d3.legend.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,6 +32,12 @@
   </head>
 
   <body>
+    <script>
+      $(document).ready(function(){
+	ratio_graph();
+	
+      });
+    </script>
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
@@ -78,41 +85,53 @@
 		</div>
 	</div>
 	
-	<div id="map">
+	<div id="map_container">
 		<div class="container">
 			<div class="row">
 				<div class="centered">
 					<h3>MAP GOES HERE</h3>
+					<div id="map">
+					  
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div id="histogram">
+	<div id="hie_tuition_container">
 		<div class="container">
 			<div class="row">
 				<div class="centered">
 					<h3>HISTO GOES HERE</h3>
+					<div id="hie_tuition">
+					  
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div id="bubbles">
+	<div id="bubbles_wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="centered">
 					<h3>BUBBLES GO HERE</h3>
+					<div id="bubbles">
+					  
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="ratio">
+	<div id="ratio_container">
 		<div class="container">
 			<div class="row">
 				<div class="centered">
 					<h3>STUDENT-TEACHER RATIO GOES HERE</h3>
+					<div id="ratio">
+					  
+					</div>
 				</div>
 			</div>
 		</div>

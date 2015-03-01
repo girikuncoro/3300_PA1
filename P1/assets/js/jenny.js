@@ -30,7 +30,7 @@ var line_private_sec = d3.svg.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.PrivateSec); });
 
-var svg_private_grades = d3.select("body").append("svg")
+var svg_private_grades = d3.select("#ratio").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -109,7 +109,7 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .tickFormat(function(d) { return d + "%"; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#ratio").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
