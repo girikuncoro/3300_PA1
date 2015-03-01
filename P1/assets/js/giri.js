@@ -82,7 +82,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
   var legend = d3.select("#donut2").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
-      .attr("height", radius * 2.5)
+      .attr("height", radius * 3)
     .selectAll("g")
       .data(color1.domain().slice().reverse())
     .enter().append("g")
@@ -104,7 +104,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
     .enter().append("svg")
       .attr("class", "pie")
       .attr("width", radius * 3)
-      .attr("height", radius * 2.5)
+      .attr("height", radius * 3)
     .append("g")
       .attr("transform", "translate(" + radius + "," + radius + ")");
 
@@ -317,6 +317,6 @@ function hie_tuition(){
       x0 += x(d.value);
       return tx;
     };
-}
+  }
 
 }
