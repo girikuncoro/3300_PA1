@@ -24,6 +24,32 @@ function us_map(){
 				.attr("width", w)
 				.attr("height", h);
 
+	var legendCircles = [
+	    { "x_axis": w-200, "y_axis": h-90, "radius": 7, "color" : "#377F65", "texts": "> $20,000" },
+	    { "x_axis": w-200, "y_axis": h-70, "radius": 7, "color" : "#429980", "texts": "between $10,000 and $20,000" },
+	    { "x_axis": w-200, "y_axis": h-50, "radius": 7, "color" : "#63E59D", "texts": "between $5,000 and $10,000" },
+	    { "x_axis": w-200, "y_axis": h-30, "radius": 7, "color" : "#B4FFD6", "texts": "< $5,000" }
+    ];
+
+	var legend = svg.selectAll("circle")
+	                .data(legendCircles)
+	                .enter()
+	              .append("circle")
+	                .attr("cx", function(d){ return d.x_axis; })
+	                .attr("cy", function(d){ return d.y_axis; })
+	                .attr("r", function(d){ return d.radius; })
+	                .style("fill", function(d){ return d.color; });
+
+	var legendText = svg.selectAll("text")
+	                .data(legendCircles)
+	                .enter()
+	              .append("text")
+	                .attr("x", function(d){ return d.x_axis + 15; })
+	                .attr("y", function(d){ return d.y_axis; })
+	                .style("fill", "black")
+	                .style("dominant-baseline", "middle")
+	                .text(function(d){ return d.texts; });
+
 	//Load in agriculture data
 	d3.csv("Dataset/averagecost.csv", function(data) {
 
