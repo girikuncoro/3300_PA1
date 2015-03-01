@@ -27,7 +27,7 @@ function donut_race(){
       });
     });
 
-  var legend = d3.select("#d1").append("svg")
+  var legend = d3.select("#donut1").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
       .attr("height", radius * 2)
@@ -47,7 +47,7 @@ function donut_race(){
       .attr("dy", ".35em")
       .text(function(d) { return d; });
 
-  var svg = d3.select("#d1").selectAll(".pie")
+  var svg = d3.select("#donut1").selectAll(".pie")
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
@@ -79,7 +79,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
     });
   });
 
-  var legend = d3.select("#d2").append("svg")
+  var legend = d3.select("#donut2").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
       .attr("height", radius * 2)
@@ -99,7 +99,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
       .attr("dy", ".35em")
       .text(function(d) { return d; });
 
-  var svg = d3.select("#d2").selectAll(".pie")
+  var svg = d3.select("#donut2").selectAll(".pie")
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
@@ -133,7 +133,7 @@ function bubble_school(){
       .size([diameter, diameter])
       .padding(1.5);
 
-  var svg = d3.select("#d3").append("svg")
+  var svg = d3.select("#bubbles").append("svg")
       .attr("width", diameter)
       .attr("height", diameter)
       .attr("class", "bubble");
@@ -152,10 +152,10 @@ function bubble_school(){
     node.append("circle")
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { 
-          if(d.value > 3000){return "#238b45"}
-          else if(d.value > 2000){return "#74c476"}
-          else if(d.value > 1000){return "#bae4b3"}
-          else {return "#edf8e9"}; 
+          if(d.value > 3000){return "#377F65"}
+          else if(d.value > 2000){return "#429980"}
+          else if(d.value > 1000){return "#63E59D"}
+          else {return "#B4FFD6"}; 
         });
 
     node.append("text")
@@ -166,10 +166,10 @@ function bubble_school(){
   });
 
   var legendCircles = [
-    { "x_axis": 30, "y_axis": 30, "radius": 7, "color" : "#238b45", "texts": "> 3,000 schools" },
-    { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#74c476", "texts": "2,001 - 3,000 schools" },
-    { "x_axis": 30, "y_axis": 70, "radius": 7, "color" : "#bae4b3", "texts": "1,001 - 2,000 schools" },
-    { "x_axis": 30, "y_axis": 90, "radius": 7, "color" : "#edf8e9", "texts": "< 1,000 schools" }
+    { "x_axis": 30, "y_axis": 30, "radius": 7, "color" : "#377F65", "texts": "> 3,000 schools" },
+    { "x_axis": 30, "y_axis": 50, "radius": 7, "color" : "#429980", "texts": "2,001 - 3,000 schools" },
+    { "x_axis": 30, "y_axis": 70, "radius": 7, "color" : "#63E59D", "texts": "1,001 - 2,000 schools" },
+    { "x_axis": 30, "y_axis": 90, "radius": 7, "color" : "#B4FFD6", "texts": "< 1,000 schools" }
     ];
 
   var legend = svg.selectAll("circle")
@@ -187,6 +187,7 @@ function bubble_school(){
                 .append("text")
                   .attr("x", function(d){ return d.x_axis + 15; })
                   .attr("y", function(d){ return d.y_axis; })
+                  .style("fill", "white")
                   .style("dominant-baseline", "middle")
                   .text(function(d){ return d.texts; });
 
@@ -226,7 +227,7 @@ function hie_tuition(){
       .scale(x)
       .orient("top");
 
-  var svg1 = d3.select("#d4").append("svg")
+  var svg1 = d3.select("#hie_tuition").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
