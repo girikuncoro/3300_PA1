@@ -82,5 +82,13 @@ p {
 }*/
 
 #donut-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+}
+
+#line_container {
+  padding-bottom: 80px;
+}
+
+#ratio_container {
+  padding-top: 80px;
 }
