@@ -194,7 +194,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
 </div>
 
 <div>
-    <h1>Enrollment in Private Schools in the US (1889-2021*)</h1>
+    <h1>Enrollment in Public Schools in the US (1889-2021*)</h1>
     <p>* Projected</p>
 <script>
 
@@ -207,7 +207,7 @@ var svg_public = d3.select("body").append("svg")
 d3.json("Dataset/private_vs_public.json", function(error, data) {
   data.forEach(function(d) {
     d.Year = +d.Year;
-    d.Private = +d.Private;
+    d.Public = +d.Public;
   });
 
   x.domain(d3.extent(data, function(d) { return d.Year; }));
@@ -300,6 +300,7 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
     .attr("transform","translate(50,30)")
     .style("font-size","12px")
     .call(d3.legend);
+
 });
 
 </script>
@@ -310,6 +311,29 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
     <h1>Enrollment in Private Elementary and Secondary Schools (1889-2021*)</h1>
     <p>* Projected</p>
 <script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(d3.format("d"));
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line_private = d3.svg.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Private); });
     
 var line_private_elem = d3.svg.line()
     .x(function(d) { return x(d.Year); })
@@ -330,11 +354,12 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
     d.Year = +d.Year;
     d.PrivateElem = +d.PrivateElem;
     d.PrivateSec = +d.PrivateSec;
+    d.Private = +d.Private;
   });
 
   x.domain(d3.extent(data, function(d) { return d.Year; }));
   y.domain([0,
-            d3.max(data, function(d) { return d.PrivateElem; })]);
+            d3.max(data, function(d) { return d.Private; })]);
 
   svg_private_grades.append("g")
       .attr("class", "x axis")
@@ -362,6 +387,12 @@ d3.json("Dataset/private_vs_public.json", function(error, data) {
       .attr("class", "line elem")
       .attr("data-legend", "Elementary")
       .attr("d", line_private_elem);
+
+  svg_private_grades.append("path")
+      .datum(data)
+      .attr("class", "line private")
+      .attr("data-legend", "Total")
+      .attr("d", line_private);
       
   svg_private_grades.append("g")
     .attr("class","legend")
