@@ -27,7 +27,7 @@ function donut_race(){
       });
     });
 
-  var legend = d3.select("#d1").append("svg")
+  var legend = d3.select("#donut1").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
       .attr("height", radius * 2)
@@ -47,7 +47,7 @@ function donut_race(){
       .attr("dy", ".35em")
       .text(function(d) { return d; });
 
-  var svg = d3.select("#d1").selectAll(".pie")
+  var svg = d3.select("#donut1").selectAll(".pie")
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
@@ -79,7 +79,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
     });
   });
 
-  var legend = d3.select("#d2").append("svg")
+  var legend = d3.select("#donut2").append("svg")
       .attr("class", "legend")
       .attr("width", radius * 2)
       .attr("height", radius * 2)
@@ -99,7 +99,7 @@ d3.csv("Dataset/private_sex.csv", function(error, data) {
       .attr("dy", ".35em")
       .text(function(d) { return d; });
 
-  var svg = d3.select("#d2").selectAll(".pie")
+  var svg = d3.select("#donut2").selectAll(".pie")
       .data(data)
     .enter().append("svg")
       .attr("class", "pie")
@@ -187,6 +187,7 @@ function bubble_school(){
                 .append("text")
                   .attr("x", function(d){ return d.x_axis + 15; })
                   .attr("y", function(d){ return d.y_axis; })
+                  .style("fill", "white")
                   .style("dominant-baseline", "middle")
                   .text(function(d){ return d.texts; });
 
