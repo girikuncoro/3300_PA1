@@ -73,13 +73,16 @@ p {
 }
 
 .about p {
-  margin: 0 auto 70px auto;
+  margin: 0 auto 0 auto;
   width: 80%;
 }
 
-/*.source {
-  margin-left: 100px;
-}*/
+#note {
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 70px;
+}
+
 
 #donut-wrapper {
   padding-bottom: 80px;
@@ -100,3 +103,4 @@ p {
 #donut_warpper {
   padding-top: 0px;
 }
+
