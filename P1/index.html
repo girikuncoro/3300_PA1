@@ -11,6 +11,26 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Giri's CSS -->
+    <style>
+    .arc {
+	  stroke: #fff;
+	}
+
+	text, remark {
+	  font: 10px Helvetica;
+	}
+
+	.axis {
+	  shape-rendering: crispEdges;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	}
+    </style>
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -34,7 +54,10 @@
   <body>
     <script>
       $(document).ready(function(){
-	ratio_graph();
+		ratio_graph();
+		donut_race();
+		bubble_school();
+		hie_tuition();
 	
       });
     </script>

@@ -133,7 +133,7 @@ function bubble_school(){
       .size([diameter, diameter])
       .padding(1.5);
 
-  var svg = d3.select("#d3").append("svg")
+  var svg = d3.select("#bubbles").append("svg")
       .attr("width", diameter)
       .attr("height", diameter)
       .attr("class", "bubble");
@@ -226,7 +226,7 @@ function hie_tuition(){
       .scale(x)
       .orient("top");
 
-  var svg1 = d3.select("#d4").append("svg")
+  var svg1 = d3.select("#hie_tuition").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
