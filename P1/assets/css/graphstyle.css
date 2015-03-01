@@ -68,3 +68,11 @@ p {
   fill: #5FDCF5;
 }
 
+#map_container {
+  padding-top: 50px;
+}
+
+.about p {
+  margin: 0 auto 70px auto;
+  width: 80%;
+}
