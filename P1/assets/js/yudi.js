@@ -1,6 +1,6 @@
 function us_map(){
 	//Width and height
-	var w = 800;
+	var w = 1000;
 	var h = 500;
 
 	//Define map projection
