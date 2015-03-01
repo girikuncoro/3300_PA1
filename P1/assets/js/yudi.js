@@ -25,10 +25,11 @@ function us_map(){
 				.attr("height", h);
 
 	var legendCircles = [
-	    { "x_axis": w-200, "y_axis": h-90, "radius": 7, "color" : "#377F65", "texts": "> $20,000" },
-	    { "x_axis": w-200, "y_axis": h-70, "radius": 7, "color" : "#429980", "texts": "between $10,000 and $20,000" },
-	    { "x_axis": w-200, "y_axis": h-50, "radius": 7, "color" : "#63E59D", "texts": "between $5,000 and $10,000" },
-	    { "x_axis": w-200, "y_axis": h-30, "radius": 7, "color" : "#B4FFD6", "texts": "< $5,000" }
+	    { "x_axis": w-200, "y_axis": h-110, "radius": 7, "color" : "#2F544D", "texts": "> $20,000" },
+	    { "x_axis": w-200, "y_axis": h-90, "radius": 7, "color" : "#4FB791", "texts": "between $15,000 and $20,000" },
+	    { "x_axis": w-200, "y_axis": h-70, "radius": 7, "color" : "#53937C", "texts": "between $10,000 and $15,000" },
+	    { "x_axis": w-200, "y_axis": h-50, "radius": 7, "color" : "#74CFAE", "texts": "between $5,000 and $10,000" },
+	    { "x_axis": w-200, "y_axis": h-30, "radius": 7, "color" : "#A4FEDA", "texts": "< $5,000" }
     ];
 
 	var legend = svg.selectAll("circle")
