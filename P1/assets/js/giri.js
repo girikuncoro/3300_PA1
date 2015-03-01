@@ -270,11 +270,11 @@ function hie_tuition(){
     enterTransition.select("rect")
         .attr("width", function(d) { return x(d.value); })
         .style("fill", function(d) {
-          if (d.value > 20000){ return "#045a8d"; } 
-          else if (d.value > 15000){ return "#2b8cbe"; } 
-          else if (d.value > 10000){ return "#74a9cf"; } 
-          else if (d.value > 5000){ return "#bdc9e1"; } 
-          else { return "#f1eef6";}
+          if (d.value > 20000){ return "#39715D"; } 
+          else if (d.value > 15000){ return "#4FB791"; } 
+          else if (d.value > 10000){ return "#5BD4A8"; } 
+          else if (d.value > 5000){ return "#69F2CD"; } 
+          else { return "#91FADF";}
         });
   });
 
@@ -304,7 +304,7 @@ function hie_tuition(){
         .attr("y", barHeight / 2)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
-        .style("fill", function(d) { if (d.value > 5000) { return "white"; }})
+        .style("fill", function(d) { if (d.value > 10000) { return "white"; }else{ return "#397162"; }} )
         .text(function(d) { return (d.value / 1000).toFixed(1) + 'k'; });
     return bar1;
   }

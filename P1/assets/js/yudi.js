@@ -74,16 +74,16 @@ function us_map(){
 				                         return d.id
 				                      })
 				                      .attr("id", function (d, i) { return d.id})
-			   .style("stroke", "black")
+			   .style("stroke", "#f2f2f2")
 			   .style("fill", function(d) {
 			   		//Get data value
 			   		var value = d.properties.value;
 
-			   		if (value > 20000){ return "#7a0177"; } 
-			        else if (value  > 15000){ return "#c51b8a"; } 
-			        else if (value  > 10000){ return "#f768a1"; } 
-			        else if (value  > 5000){ return "#fbb4b9"; } 
-			        else {return "#feebe2";}
+			   		if (value > 20000){ return "#2F544D"; } 
+			        else if (value  > 15000){ return "#4FB791"; } 
+			        else if (value  > 10000){ return "#53937C"; } 
+			        else if (value  > 5000){ return "#74CFAE"; } 
+			        else {return "#A4FEDA";}
 			   });
 		});
 	});
