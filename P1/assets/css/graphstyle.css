@@ -34,15 +34,11 @@ text, remark {
   stroke-width: 2.5px;
 }  
 .private {
-    stroke: red;
-}
-
-.public {
-    stroke: steelblue;
+    stroke: #364F54;
 }
 
 .sec {
-    stroke: #B25329;
+    stroke: #69F2C0;
 }
 
 .elem {
