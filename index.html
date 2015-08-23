@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+svg {
+  padding: 10px 0 0 10px;
+}
+
+.arc {
+  stroke: #fff;
+}
+
+text, remark {
+  font: 10px Helvetica;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+/*.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}*/
+
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2.5px;
+}  
+.private {
+    stroke: red;
+}
+
+.public {
+    stroke: steelblue;
+}
+
+.sec {
+    stroke: #B25329;
+}
+
+.elem {
+    stroke: #55B2A6;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;
+  }
+
+.private_bar {
+  fill: #e377c2;
+}
+
+.public_bar {
+  fill: #1f77b4;
+}
+
+</style>
+<body>
+<h1>Private school races and gender</h1>
+<div id="d1"></div>
+<div id="d2"></div>
+<h1></br>Number of private schools on each state (data:2009)</h1>
+<div id="d3"></div>
+<h1></br>Tuition cost of private schools on each state (data:2014-2015)</h1>
+<div id="d4"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/giri.js"></script>
+<script src="js/d3.legend.js"></script>
+<script src="js/jenny.js"></script>
+<script>
+donut_race();
+bubble_school();
+hie_tuition();
+line_graph();
+ratio_graph();
+</script>

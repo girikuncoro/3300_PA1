@@ -11,7 +11,7 @@ text {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var diameter = 900,
+var diameter = 650,
     format = d3.format(",d"),
     color = d3.scale.category10();
 
@@ -25,7 +25,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
-d3.json("Dataset/tuition3.json", function(error, root) {
+d3.json("Dataset/schoolnumber.json", function(error, root) {
   var node = svg.selectAll(".node")
       .data(bubble.nodes(classes(root))
       .filter(function(d) { return !d.children; }))
@@ -38,13 +38,36 @@ d3.json("Dataset/tuition3.json", function(error, root) {
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.packageName); });
+      //.style("fill", function(d) { return color(d.packageName); });
+      .style("fill", "#1f77b4");
 
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
+      .style("fill", "white")
       .text(function(d) { return d.className.substring(0, d.r); });
 });
+
+var legendCircles = [
+  { "x_axis": 30, "y_axis": 30, "radius": 8, "color" : "#1f77b4", "texts": "Number of private schools" }];
+
+var legend = svg.selectAll("circle")
+                .data(legendCircles)
+                .enter()
+              .append("circle")
+                .attr("cx", function(d){ return d.x_axis; })
+                .attr("cy", function(d){ return d.y_axis; })
+                .attr("r", function(d){ return d.radius; })
+                .style("fill", function(d){ return d.color; });
+
+var legendText = svg.selectAll("text")
+                .data(legendCircles)
+                .enter()
+              .append("text")
+                .attr("x", function(d){ return d.x_axis + 15; })
+                .attr("y", function(d){ return d.y_axis; })
+                .style("dominant-baseline", "middle")
+                .text(function(d){ return d.texts; });
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
